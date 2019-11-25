@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1,user-scalable=no" name="viewport">
+    <title>学研Web入会｜ログイン</title>
+    <link rel="stylesheet" href="./libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap-4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="./libs/bootstrap-table/bootstrap-table.css">
+    <link rel="stylesheet" href="./css/F10603.css">
+    <link rel="stylesheet" href="./css/common.css">
+
+    <script src="./libs/jquery-3.4.1/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="./libs/bootstrap-table/popper.min.js" type="text/javascript"></script>
+    <script src="./libs/bootstrap-4.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./libs/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" type="text/javascript"></script>
+    <script src="./libs/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ja.js" type="text/javascript"></script>
+    <script src="./libs/bootstrap-table/bootstrap-table.js" type="text/javascript"></script>
+    <script src="./libs/bootstrap-table/bootstrap-table-locale-all.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="login_container">
+    <div class="logo">
+        <!--<img src="./img/gakken_logo.png">-->
+        <div class="logo_div">
+            <img src="./img/gakken_logo.png" >
+            <!--<span>田中 太郎</span>-->
+            <!--<span>さん</span>-->
+        </div>
+    </div>
+</div>
+<div class="container">
+    <span class="title">新規登録</span><br>
+    <div class="sequenceDiv">
+        <span class="striping">---------------------------------------------------------------</span>
+        <button class="btn sequence" style="margin-left: 0;">1</button>
+        <button class="btn sequence">2</button>
+        <button class="btn sequence active">3</button>
+        <button class="btn sequence">4</button>
+        <button class="btn sequence" style="margin-right: 0;">5</button>
+    </div>
+    <div class="sequenceExplain">
+        <span style="margin-left: 0">確認用メール送信</span> <span>メールアドレス認証</span> <span>アカウント登録</span> <span>登録内容確認</span> <span style="margin-right: 0">登録完了</span>
+    </div>
+    <form class="bs-example bs-example-form" role="form" id="loginForm">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">ID</span>
+                    <span class="itemDescription">半角英数字8文字以上</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="id" placeholder="aaaa1111">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">パスワード</span>
+                    <span class="itemDescription">大文字小文了数字を含む8文字以上</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="password" class="form-control" name="password" placeholder="・・・">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">パスワード（確認）</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="password" class="form-control" name="passwordConfirm" placeholder="・・・">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">保護者様氏名（漢字）</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <label>姓</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="学研">
+                    <label>名</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="太郎">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">保護者様氏名（カタカナ）</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <label>姓</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="ガッケン">
+                    <label>名</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="タロウ">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">郵便番号</span>
+                    <span class="itemDescription">ハイフンなし</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group" style="width: 100%">
+                    <input type="text" class="form-control" name="password" placeholder="1112222" style="width: 75%"><button type="button"
+                                                                                                                      class="btn btn-success" id="searchBtn">
+                    住所検索</button>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">都道府県</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <select class="form-control" name="password">
+                        <option>東京都</option>
+                        <option>大阪市</option>
+                    </select>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">住所1</span>
+                    <span class="itemDescription">市区町村</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="password" placeholder="品川区五反田2丁目">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">住所2</span>
+                    <span class="itemDescription">番地</span>
+                    <span class="must">必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="password" placeholder="0番地">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">住所3</span>
+                    <span class="itemDescription">建物・部屋番号</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="password" placeholder="五反田マンション101">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">電話番号（自宅）</span>
+                    <span class="must longer">どちらが必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control shorter" name="password" placeholder="12">
+                    <label>-</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="3456">
+                    <label>-</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="7890">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">電話番号（携帯）</span>
+                    <span class="must longer">どちらが必須</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control shorter" name="password" placeholder="111">
+                    <label>-</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="2222">
+                    <label>-</label>
+                    <input type="text" class="form-control shorter" name="password" placeholder="3333">
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">メールアドレス</span>
+                    <span class="itemDescription">登録時の変更はできません。</span>
+                </span>
+                <div class="input-group">
+                    <input type="text" class="form-control" name="password" placeholder="email@gmail.com">
+                </div>
+            </li>
+
+            <li class="list-group-item nonePadding">
+                <span class="itemTop">
+                    <span class="itemName">個人情報の取り扱いについて</span>
+                </span>
+                <div class="input-group">
+                    <p>このサイトを通してお客様からご入カいただきましたお客様のお名前・ご住所・お電話番号・電子メールアドレス等の個人情報は、体験や入会などのお手続きに必要な範囲内でのみ利用させていただきます。</p>
+                </div>
+            </li>
+            <li class="list-group-item nonePadding">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i>プライバシーポリシー</a>
+            </li>
+            <li class="list-group-item nonePadding" style="padding-left: 0">
+                <div class="input-group btnDiv">
+                    <button type="button" class="btn btn-success" id="nextBtn">確認画面へ</button>
+                </div>
+            </li>
+        </ul>
+
+        <ul class="list-group" style="display: none;">
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">ID</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">s01</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">パスワード</span>
+                    <span class="itemDescription">大文字小文字 数字を含む8文字以上</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">パスワード（確認）</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">保護者様氏名（漢字）</span>
+                </span>
+                <div class="input-group">
+                    <label>姓</label>
+                    <span class="itemValue">中村</span>
+                    <label>名</label>
+                    <span class="itemValue">一郎</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">保護者様氏名（カタカナ）</span>
+                </span>
+                <div class="input-group">
+                    <label>姓</label>
+                    <span class="itemValue">ほんだ</span>
+                    <label>名</label>
+                    <span class="itemValue">いちろん</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">郵便番号</span>
+                    <span class="itemDescription">ハイフンなし</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">都道府県</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">住所1</span>
+                    <span class="itemDescription">市区町村</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">住所2</span>
+                    <span class="itemDescription">番地</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">住所3</span>
+                    <span class="itemDescription">建物・部屋番号</span>
+                </span>
+                <div class="input-group">
+                    <span class="itemValue">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">電話番号（自宅）</span>
+                </span>
+                <div class="input-group">
+                    <span class="telNo">12345</span>
+                    <label>-</label>
+                    <span class="telNo">12345</span>
+                    <label>-</label>
+                    <span class="telNo">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">電話番号（携帯）</span>
+                </span>
+                <div class="input-group">
+                    <span class="telNo">12345</span>
+                    <label>-</label>
+                    <span class="telNo">12345</span>
+                    <label>-</label>
+                    <span class="telNo">12345</span>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <span class="itemTop">
+                    <span class="itemName">メールアドレス</span>
+                </span>
+                <div class="input-group">
+                    <label>email@gmail.com</label>
+                </div>
+            </li>
+
+            <li class="list-group-item nonePadding">
+                <div class="input-group btnDiv">
+                    <button type="button" class="btn btn-success" onclick="" id="backBtn">戻る</button>
+                </div>
+                <div class="input-group btnDiv">
+                    <button type="button" class="btn btn-success" onclick="window.location.href='./F10604.html'">登録</button>
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+</body>
+<script>
+    $("#nextBtn").click(function () {
+        $(".list-group").eq(0).hide();
+        $(".list-group").eq(1).show();
+        $(".sequence").removeClass("active");
+        $(".sequence").eq(3).addClass("active");
+        scrollTo(0,0);
+    });
+
+    $("#backBtn").click(function () {
+        $(".list-group").eq(1).hide();
+        $(".list-group").eq(0).show();
+        $(".sequence").removeClass("active");
+        $(".sequence").eq(2).addClass("active");
+        scrollTo(0,0);
+    });
+</script>
+</html>
